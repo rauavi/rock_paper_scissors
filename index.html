@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Rock Paper Scissors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>GAME ON</h1>
+
+        <div class="game-buttons">
+            <button class="choice-btn" onclick="playGame('Rock')">
+                <i class="fas fa-hand-rock"></i>
+                Rock
+            </button>
+            <button class="choice-btn" onclick="playGame('Paper')">
+                <i class="fas fa-hand-paper"></i>
+                Paper
+            </button>
+            <button class="choice-btn" onclick="playGame('Scissors')">
+                <i class="fas fa-hand-scissors"></i>
+                Scissors
+            </button>
+        </div>
+
+        <div class="status-display">
+            <div id="result-text">Choose your move!</div>
+            <div id="move-details">Waiting for player...</div>
+        </div>
+
+        <div class="score-board">
+            <div class="score-item">
+                <span>WINS</span>
+                <strong id="wins">0</strong>
+            </div>
+            <div class="score-item">
+                <span>LOSSES</span>
+                <strong id="losses">0</strong>
+            </div>
+            <div class="score-item">
+                <span>TIES</span>
+                <strong id="ties">0</strong>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn reset-btn" onclick="resetGame()">Reset</button>
+            <button class="control-btn auto-btn" id="auto-btn" onclick="toggleAutoPlay()">Auto Play</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
